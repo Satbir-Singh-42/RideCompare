@@ -150,16 +150,6 @@ export function Layout() {
                   style={{ fontSize: "0.9rem" }}>
                   How It Works
                 </Link>
-                <span
-                  className="text-primary-foreground/50"
-                  style={{ fontSize: "0.9rem" }}>
-                  API Access
-                </span>
-                <span
-                  className="text-primary-foreground/50"
-                  style={{ fontSize: "0.9rem" }}>
-                  Features
-                </span>
               </div>
             </div>
             <div>
@@ -174,24 +164,14 @@ export function Layout() {
               </h4>
               <div className="flex flex-col gap-3">
                 <span
-                  className="text-primary-foreground/70 hover:text-accent cursor-pointer transition-colors"
+                  className="text-primary-foreground/50"
                   style={{ fontSize: "0.9rem" }}>
                   Privacy Policy
                 </span>
                 <span
-                  className="text-primary-foreground/70 hover:text-accent cursor-pointer transition-colors"
+                  className="text-primary-foreground/50"
                   style={{ fontSize: "0.9rem" }}>
                   Terms of Service
-                </span>
-                <span
-                  className="text-primary-foreground/70 hover:text-accent cursor-pointer transition-colors"
-                  style={{ fontSize: "0.9rem" }}>
-                  Data Policy
-                </span>
-                <span
-                  className="text-primary-foreground/70 hover:text-accent cursor-pointer transition-colors"
-                  style={{ fontSize: "0.9rem" }}>
-                  Compliance
                 </span>
               </div>
             </div>

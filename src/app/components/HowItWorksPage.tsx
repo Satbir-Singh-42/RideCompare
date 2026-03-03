@@ -13,7 +13,6 @@ import {
   Bell,
   Sparkles,
   CheckCircle2,
-  ArrowRight,
 } from "lucide-react";
 import { useEffect } from "react";
 
@@ -542,13 +541,6 @@ export function HowItWorksPage() {
                     style={{ fontSize: "0.95rem", lineHeight: 1.7 }}>
                     {item.desc}
                   </p>
-
-                  <div className="mt-6 flex items-center gap-2 text-accent group-hover:gap-3 transition-all">
-                    <span style={{ fontSize: "0.85rem", fontWeight: 600 }}>
-                      Learn more
-                    </span>
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
                 </div>
               </div>
             ))}
