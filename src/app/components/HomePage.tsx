@@ -433,8 +433,8 @@ export function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { name: "Uber", color: "#000000", tagline: "Global Leader" },
-              { name: "Lyft", color: "#FF00BF", tagline: "US Premier" },
-              { name: "Ola", color: "#35B44F", tagline: "India's Choice" },
+              { name: "Lyft", color: "#FFFFFF", tagline: "US Premier" },
+              { name: "Ola", color: "#FFFFFF", tagline: "India's Choice" },
               { name: "Rapido", color: "#FFD500", tagline: "Quick Transit" },
             ].map((p, i) => (
               <div key={i} className="group relative">

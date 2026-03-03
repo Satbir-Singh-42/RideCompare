@@ -20,8 +20,8 @@ export interface Provider {
 
 export const providers: Provider[] = [
   { name: "Uber", color: "#000000", logo: "/logos/uber.png" },
-  { name: "Lyft", color: "#FF00BF", logo: "/logos/lyft.png" },
-  { name: "Ola", color: "#35B44F", logo: "/logos/ola.png" },
+  { name: "Lyft", color: "#FFFFFF", logo: "/logos/lyft.png" },
+  { name: "Ola", color: "#FFFFFF", logo: "/logos/ola.png" },
   { name: "Rapido", color: "#FFD500", logo: "/logos/rapido.png" },
 ];
 
@@ -121,7 +121,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "lyft-standard",
       provider: "Lyft",
-      providerColor: "#FF00BF",
+      providerColor: "#FFFFFF",
       vehicleType: "Lyft Standard",
       vehicleCategory: "mini",
       fare: Math.round(60 + baseDistance * 11),
@@ -132,7 +132,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "lyft-xl",
       provider: "Lyft",
-      providerColor: "#FF00BF",
+      providerColor: "#FFFFFF",
       vehicleType: "Lyft XL",
       vehicleCategory: "suv",
       fare: Math.round(130 + baseDistance * 17),
@@ -145,7 +145,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "lyft-lux",
       provider: "Lyft",
-      providerColor: "#FF00BF",
+      providerColor: "#FFFFFF",
       vehicleType: "Lyft Lux",
       vehicleCategory: "premium",
       fare: Math.round(200 + baseDistance * 25),
@@ -157,7 +157,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "ola-auto",
       provider: "Ola",
-      providerColor: "#35B44F",
+      providerColor: "#FFFFFF",
       vehicleType: "Ola Auto",
       vehicleCategory: "auto",
       fare: Math.round(30 + baseDistance * 7),
@@ -168,7 +168,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "ola-bike",
       provider: "Ola",
-      providerColor: "#35B44F",
+      providerColor: "#FFFFFF",
       vehicleType: "Ola Bike",
       vehicleCategory: "bike",
       fare: Math.round(18 + baseDistance * 4),
@@ -179,7 +179,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "ola-mini",
       provider: "Ola",
-      providerColor: "#35B44F",
+      providerColor: "#FFFFFF",
       vehicleType: "Ola Mini",
       vehicleCategory: "mini",
       fare: Math.round(55 + baseDistance * 10),
@@ -190,7 +190,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "ola-sedan",
       provider: "Ola",
-      providerColor: "#35B44F",
+      providerColor: "#FFFFFF",
       vehicleType: "Ola Prime Sedan",
       vehicleCategory: "sedan",
       fare: Math.round(85 + baseDistance * 14),
@@ -201,7 +201,7 @@ export function generateMockResults(pickup: string, drop: string): RideOption[] 
     {
       id: "ola-suv",
       provider: "Ola",
-      providerColor: "#35B44F",
+      providerColor: "#FFFFFF",
       vehicleType: "Ola Prime SUV",
       vehicleCategory: "suv",
       fare: Math.round(125 + baseDistance * 16),
