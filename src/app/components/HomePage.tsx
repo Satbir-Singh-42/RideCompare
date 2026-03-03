@@ -75,7 +75,7 @@ export function HomePage() {
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left Content */}
             <div>
               {/* Badge */}
@@ -166,9 +166,15 @@ export function HomePage() {
                       )}
                     </div>
 
-                    {/* Dotted Connector */}
-                    <div className="flex items-center pl-5 sm:pl-7">
-                      <div className="w-px h-5 sm:h-8 border-l-2 border-dashed border-accent/30" />
+                    {/* Route Connector */}
+                    <div className="flex items-center gap-3 pl-4 sm:pl-6 py-0.5">
+                      <div className="flex flex-col items-center gap-0.5">
+                        <div className="w-0.5 h-1.5 rounded-full bg-accent/60" />
+                        <div className="w-0.5 h-1.5 rounded-full bg-accent/40" />
+                        <div className="w-0.5 h-1.5 rounded-full bg-destructive/40" />
+                        <div className="w-0.5 h-1.5 rounded-full bg-destructive/60" />
+                      </div>
+                      <div className="h-px flex-1 bg-gradient-to-r from-accent/30 via-border/50 to-destructive/30" />
                     </div>
 
                     {/* Drop */}
@@ -261,7 +267,7 @@ export function HomePage() {
             </div>
 
             {/* Right - Hero Image */}
-            <div className="hidden lg:block relative">
+            <div className="hidden lg:block relative mt-8">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent rounded-3xl blur-3xl" />
                 <div className="relative rounded-3xl overflow-hidden border-4 border-accent/30 shadow-2xl group">
