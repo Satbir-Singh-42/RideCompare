@@ -1,0 +1,205 @@
+/**
+ * Custom Scrollbar Styles
+ * Premium scrollbar design matching the Guinness-inspired theme
+ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 #1a1311;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1311;
+  border-radius: 10px;
+  margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 100%);
+  border-radius: 10px;
+  border: 2px solid #1a1311;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e5bf47 0%, #d1b038 100%);
+  border-color: #2a2321;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #c1a028 0%, #a89020 100%);
+}
+
+/* Scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: #1a1311;
+}
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+/* Light theme scrollbar (for card components) */
+.light-scrollbar::-webkit-scrollbar-track {
+  background: #f4e8d9;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 100%);
+  border: 2px solid #f4e8d9;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e5bf47 0%, #d1b038 100%);
+  border-color: #e8dcc8;
+}
+
+/* Thin scrollbar variant */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Animated scrollbar on hover */
+.animated-scrollbar {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.animated-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  transition: width 0.3s ease;
+}
+
+.animated-scrollbar:hover::-webkit-scrollbar {
+  width: 12px;
+}
+
+.animated-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.animated-scrollbar::-webkit-scrollbar-thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+  border-radius: 10px;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Premium glow effect on scroll */
+.glow-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 100%);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4),
+              0 0 15px rgba(212, 175, 55, 0.2);
+  animation: scrollGlow 2s ease-in-out infinite;
+}
+
+@keyframes scrollGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4),
+                0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6),
+                0 0 20px rgba(212, 175, 55, 0.3);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll snap for galleries */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: start;
+}
+
+/* Results container scrollbar */
+.results-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.results-scrollbar::-webkit-scrollbar-track {
+  background: rgba(26, 19, 17, 0.3);
+  border-radius: 8px;
+}
+
+.results-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 50%, #a89020 100%);
+  border-radius: 8px;
+  border: 2px solid rgba(26, 19, 17, 0.3);
+}
+
+.results-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e5bf47 0%, #d1b038 50%, #b8a030 100%);
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+
+/* Suggestions dropdown scrollbar */
+.suggestions-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.suggestions-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c1a028 100%);
+  border-radius: 6px;
+}
+
+/* Responsive scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .animated-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .animated-scrollbar:hover::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+/* Prevent scrollbar layout shift */
+.stable-scrollbar {
+  scrollbar-gutter: stable;
+}
