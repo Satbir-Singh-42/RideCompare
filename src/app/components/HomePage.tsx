@@ -116,16 +116,13 @@ export function HomePage() {
 
               {/* Search Form */}
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl" />
-                <div className="relative bg-card/95 backdrop-blur-xl rounded-xl sm:rounded-2xl border-2 border-accent/30 p-4 sm:p-6 md:p-8 shadow-2xl">
-                  <div className="flex flex-col gap-3 sm:gap-5">
+                <div className="absolute inset-0 bg-accent/10 rounded-xl blur-lg" />
+                <div className="relative bg-[#1a1311]/90 backdrop-blur-xl rounded-xl border border-accent/20 p-3 sm:p-5 shadow-xl">
+                  <div className="flex flex-col gap-2 sm:gap-3">
                     {/* Pickup */}
                     <div className="relative group">
-                      <div className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10">
-                        <div className="relative">
-                          <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-accent ring-4 ring-accent/20 group-focus-within:ring-6 transition-all" />
-                          <div className="absolute inset-0 rounded-full bg-accent animate-ping opacity-20" />
-                        </div>
+                      <div className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10">
+                        <div className="w-2.5 h-2.5 rounded-full bg-accent ring-2 ring-accent/20 group-focus-within:ring-4 transition-all" />
                       </div>
                       <input
                         type="text"
@@ -136,28 +133,24 @@ export function HomePage() {
                         onBlur={() =>
                           setTimeout(() => setShowPickupSuggestions(false), 200)
                         }
-                        className="w-full pl-10 sm:pl-14 pr-3 sm:pr-5 py-3.5 sm:py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
+                        className="w-full pl-9 sm:pl-11 pr-3 sm:pr-4 py-3 sm:py-3.5 bg-[#2a2321]/60 rounded-lg border border-accent/15 focus:border-accent/50 focus:bg-[#2a2321]/80 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/35"
                         style={{
-                          fontSize: "clamp(0.875rem, 2.5vw, 1.05rem)",
+                          fontSize: "clamp(0.85rem, 2.5vw, 0.95rem)",
                           fontWeight: 500,
                         }}
                       />
                       {showPickupSuggestions && pickup.length > 0 && (
-                        <div className="absolute top-full left-0 right-0 mt-2 bg-card rounded-xl border-2 border-accent/30 shadow-2xl z-20 max-h-64 overflow-y-auto backdrop-blur-xl">
+                        <div className="absolute top-full left-0 right-0 mt-1.5 bg-[#1a1311] rounded-lg border border-accent/20 shadow-xl z-20 max-h-56 overflow-y-auto backdrop-blur-xl">
                           {filteredLocations(pickup).map((loc) => (
                             <button
                               key={loc}
-                              className="w-full text-left px-5 py-3.5 hover:bg-accent/10 transition-colors flex items-center gap-3 text-foreground border-b border-border/30 last:border-0"
+                              className="w-full text-left px-4 py-2.5 hover:bg-accent/10 transition-colors flex items-center gap-2.5 text-primary-foreground border-b border-accent/10 last:border-0"
                               onMouseDown={() => {
                                 setPickup(loc);
                                 setShowPickupSuggestions(false);
                               }}>
-                              <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
-                              <span
-                                style={{
-                                  fontSize: "0.95rem",
-                                  fontWeight: 500,
-                                }}>
+                              <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                              <span style={{ fontSize: "0.875rem", fontWeight: 500 }}>
                                 {loc}
                               </span>
                             </button>
@@ -167,23 +160,19 @@ export function HomePage() {
                     </div>
 
                     {/* Route Connector */}
-                    <div className="flex items-center gap-3 pl-4 sm:pl-6 py-0.5">
-                      <div className="flex flex-col items-center gap-0.5">
-                        <div className="w-0.5 h-1.5 rounded-full bg-accent/60" />
-                        <div className="w-0.5 h-1.5 rounded-full bg-accent/40" />
-                        <div className="w-0.5 h-1.5 rounded-full bg-destructive/40" />
-                        <div className="w-0.5 h-1.5 rounded-full bg-destructive/60" />
+                    <div className="flex items-center pl-4 sm:pl-5">
+                      <div className="flex flex-col items-center gap-px">
+                        <div className="w-px h-1.5 bg-accent/40" />
+                        <div className="w-px h-1.5 bg-accent/25" />
+                        <div className="w-px h-1.5 bg-destructive/25" />
+                        <div className="w-px h-1.5 bg-destructive/40" />
                       </div>
-                      <div className="h-px flex-1 bg-gradient-to-r from-accent/30 via-border/50 to-destructive/30" />
                     </div>
 
                     {/* Drop */}
                     <div className="relative group">
-                      <div className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10">
-                        <div className="relative">
-                          <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-destructive ring-4 ring-destructive/20 group-focus-within:ring-6 transition-all" />
-                          <div className="absolute inset-0 rounded-full bg-destructive animate-ping opacity-20" />
-                        </div>
+                      <div className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10">
+                        <div className="w-2.5 h-2.5 rounded-full bg-destructive ring-2 ring-destructive/20 group-focus-within:ring-4 transition-all" />
                       </div>
                       <input
                         type="text"
@@ -194,28 +183,24 @@ export function HomePage() {
                         onBlur={() =>
                           setTimeout(() => setShowDropSuggestions(false), 200)
                         }
-                        className="w-full pl-10 sm:pl-14 pr-3 sm:pr-5 py-3.5 sm:py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
+                        className="w-full pl-9 sm:pl-11 pr-3 sm:pr-4 py-3 sm:py-3.5 bg-[#2a2321]/60 rounded-lg border border-accent/15 focus:border-accent/50 focus:bg-[#2a2321]/80 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/35"
                         style={{
-                          fontSize: "clamp(0.875rem, 2.5vw, 1.05rem)",
+                          fontSize: "clamp(0.85rem, 2.5vw, 0.95rem)",
                           fontWeight: 500,
                         }}
                       />
                       {showDropSuggestions && drop.length > 0 && (
-                        <div className="absolute top-full left-0 right-0 mt-2 bg-card rounded-xl border-2 border-accent/30 shadow-2xl z-20 max-h-64 overflow-y-auto backdrop-blur-xl">
+                        <div className="absolute top-full left-0 right-0 mt-1.5 bg-[#1a1311] rounded-lg border border-accent/20 shadow-xl z-20 max-h-56 overflow-y-auto backdrop-blur-xl">
                           {filteredLocations(drop).map((loc) => (
                             <button
                               key={loc}
-                              className="w-full text-left px-5 py-3.5 hover:bg-accent/10 transition-colors flex items-center gap-3 text-foreground border-b border-border/30 last:border-0"
+                              className="w-full text-left px-4 py-2.5 hover:bg-accent/10 transition-colors flex items-center gap-2.5 text-primary-foreground border-b border-accent/10 last:border-0"
                               onMouseDown={() => {
                                 setDrop(loc);
                                 setShowDropSuggestions(false);
                               }}>
-                              <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
-                              <span
-                                style={{
-                                  fontSize: "0.95rem",
-                                  fontWeight: 500,
-                                }}>
+                              <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                              <span style={{ fontSize: "0.875rem", fontWeight: 500 }}>
                                 {loc}
                               </span>
                             </button>
@@ -227,15 +212,15 @@ export function HomePage() {
                     <button
                       onClick={handleCompare}
                       disabled={!pickup.trim() || !drop.trim()}
-                      className="mt-2 sm:mt-3 w-full py-3.5 sm:py-5 bg-gradient-to-r from-primary via-[#2a2321] to-primary text-primary-foreground rounded-xl hover:shadow-2xl hover:shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3 border-2 border-accent/40 group relative overflow-hidden"
+                      className="mt-1.5 w-full py-3 sm:py-3.5 bg-accent text-accent-foreground rounded-lg hover:shadow-lg hover:shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 group relative overflow-hidden"
                       style={{
-                        fontSize: "clamp(0.95rem, 2.5vw, 1.15rem)",
-                        fontWeight: 800,
-                        letterSpacing: "0.05em",
+                        fontSize: "clamp(0.85rem, 2.5vw, 0.95rem)",
+                        fontWeight: 700,
+                        letterSpacing: "0.06em",
                       }}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                       <span className="relative">COMPARE FARES</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative" />
                     </button>
                   </div>
                 </div>
