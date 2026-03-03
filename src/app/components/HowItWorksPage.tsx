@@ -57,7 +57,7 @@ export function HowItWorksPage() {
             }}>
             How RideCompare
             <br />
-            <span className="text-accent">Delivers Excellence</span>
+            <span className="text-accent">Works</span>
           </h1>
 
           <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto rounded-full mb-8" />
@@ -65,9 +65,8 @@ export function HowItWorksPage() {
           <p
             className="text-primary-foreground/70 max-w-3xl mx-auto leading-relaxed"
             style={{ fontSize: "1.25rem", lineHeight: 1.8 }}>
-            A sophisticated aggregation platform engineered with precision,
-            built on official partnerships, and designed for the most discerning
-            travelers.
+            A ride comparison platform built on official API partnerships,
+            designed to save you time and money.
           </p>
         </div>
       </section>
@@ -260,7 +259,7 @@ export function HowItWorksPage() {
             </p>
           </div>
 
-          {/* Premium Image */}
+          {/* Partnership Image */}
           <div className="mb-16 relative group max-w-5xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-transparent rounded-3xl blur-3xl" />
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 sm:border-4 border-accent/30 shadow-2xl">
@@ -390,7 +389,7 @@ export function HowItWorksPage() {
               },
               {
                 icon: <Bell className="w-7 h-7" />,
-                title: "Premium Alert Services",
+                title: "Fare Alert Services",
                 desc: "Subscription tier providing real-time surge notifications, fare reduction alerts, and optimal booking window recommendations.",
                 metrics: "Recurring SaaS",
               },
@@ -486,8 +485,7 @@ export function HowItWorksPage() {
             <p
               className="text-primary-foreground/70 max-w-3xl mx-auto leading-relaxed"
               style={{ fontSize: "1.2rem", lineHeight: 1.8 }}>
-              Our strategic vision for establishing dominance in the premium
-              mobility aggregation sector
+              Our vision for growing the ride comparison space globally
             </p>
           </div>
 

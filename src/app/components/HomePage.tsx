@@ -78,13 +78,13 @@ export function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <div>
-              {/* Premium Badge */}
+              {/* Badge */}
               <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border-2 border-accent/40 bg-gradient-to-r from-accent/10 to-accent/5 backdrop-blur-sm mb-8 shadow-lg">
                 <Sparkles className="w-4 h-4 text-accent animate-pulse" />
                 <span
                   className="text-accent uppercase tracking-[0.15em]"
                   style={{ fontSize: "0.75rem", fontWeight: 700 }}>
-                  Luxury Mobility Aggregation
+                  Smart Ride Comparison
                 </span>
                 <div className="w-1 h-1 rounded-full bg-accent animate-pulse" />
               </div>
@@ -107,9 +107,8 @@ export function HomePage() {
               <p
                 className="text-primary-foreground/70 mb-10 max-w-xl leading-relaxed"
                 style={{ fontSize: "1.15rem", lineHeight: 1.8 }}>
-                An exclusive platform engineered for sophisticated travelers.
-                Compare premium mobility services from Uber, Lyft, Ola, and
-                Rapido with unparalleled precision and elegance.
+                Compare rides from Uber, Lyft, Ola, and Rapido side by side. Get
+                real-time fares, ETAs, and availability — all in one place.
               </p>
 
               {/* Stats */}
@@ -294,7 +293,7 @@ export function HomePage() {
                 <div className="relative rounded-3xl overflow-hidden border-4 border-accent/30 shadow-2xl group">
                   <img
                     src="/images/hero-luxury-car.png"
-                    alt="Luxury executive transportation"
+                    alt="Ride comparison hero"
                     className="w-full h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
@@ -386,7 +385,7 @@ export function HomePage() {
               <span
                 className="text-accent uppercase tracking-[0.15em]"
                 style={{ fontSize: "0.7rem", fontWeight: 700 }}>
-                Excellence in Every Detail
+                Why RideCompare
               </span>
             </div>
             <h2
@@ -396,7 +395,7 @@ export function HomePage() {
                 fontWeight: 900,
                 letterSpacing: "-0.02em",
               }}>
-              Engineered for Distinction
+              Why People Choose Us
             </h2>
             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto rounded-full" />
           </div>
@@ -406,14 +405,14 @@ export function HomePage() {
             {[
               {
                 icon: <TrendingDown className="w-8 h-8" />,
-                title: "Optimal Value",
-                desc: "Sophisticated algorithms identify the most economical options without compromising quality.",
+                title: "Best Price",
+                desc: "Smart algorithms find the cheapest ride across all providers so you always get the best deal.",
                 color: "from-[#d4af37] to-[#c1a028]",
               },
               {
                 icon: <Clock className="w-8 h-8" />,
-                title: "Time Mastery",
-                desc: "A unified, elegant interface eliminates the inefficiency of multiple applications.",
+                title: "Save Time",
+                desc: "One search instead of switching between four apps. See all your options instantly.",
                 color: "from-[#1a1311] to-[#0d0b0a]",
               },
               {
@@ -424,8 +423,8 @@ export function HomePage() {
               },
               {
                 icon: <Shield className="w-8 h-8" />,
-                title: "Absolute Trust",
-                desc: "Exclusive official API partnerships guarantee authenticity and data integrity.",
+                title: "Trusted Data",
+                desc: "Official API partnerships with every provider ensure accurate, real-time data.",
                 color: "from-[#5a524d] to-[#3a342f]",
               },
             ].map((feature, i) => (
@@ -469,14 +468,14 @@ export function HomePage() {
             ))}
           </div>
 
-          {/* Premium Image Gallery */}
+          {/* Image Gallery */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-2xl blur-2xl" />
               <div className="relative rounded-2xl overflow-hidden border-4 border-accent/30 shadow-2xl">
                 <img
                   src="/images/premium-business-travel.png"
-                  alt="Premium business travel experience"
+                  alt="Business travel"
                   className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent" />
@@ -486,7 +485,7 @@ export function HomePage() {
                     <span
                       className="text-accent-foreground uppercase tracking-wider"
                       style={{ fontSize: "0.65rem", fontWeight: 700 }}>
-                      First Class Experience
+                      All Vehicle Types
                     </span>
                   </div>
                   <h3
@@ -496,13 +495,13 @@ export function HomePage() {
                       fontWeight: 900,
                       letterSpacing: "-0.01em",
                     }}>
-                    Executive Comfort
+                    Every Ride Option
                   </h3>
                   <p
                     className="text-primary-foreground/80"
                     style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
-                    Access premium vehicle options across all providers with
-                    transparent pricing
+                    Compare autos, bikes, minis, sedans, SUVs, and more across
+                    all providers with transparent pricing
                   </p>
                 </div>
               </div>
@@ -513,7 +512,7 @@ export function HomePage() {
               <div className="relative rounded-2xl overflow-hidden border-4 border-accent/30 shadow-2xl">
                 <img
                   src="/images/city-skyline-night.png"
-                  alt="Sophisticated urban mobility"
+                  alt="City mobility"
                   className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent" />
@@ -565,7 +564,7 @@ export function HomePage() {
                 fontWeight: 900,
                 letterSpacing: "-0.02em",
               }}>
-              Distinguished Partnerships
+              Our Partners
             </h2>
             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto rounded-full mb-6" />
             <p
@@ -620,7 +619,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Premium CTA */}
+      {/* CTA */}
       <section className="relative py-32 overflow-hidden">
         {/* Animated Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#2a2321] to-primary">
@@ -652,15 +651,14 @@ export function HomePage() {
               fontWeight: 900,
               letterSpacing: "-0.02em",
             }}>
-            Experience Mobility <span className="text-accent">Redefined</span>
+            Experience Mobility <span className="text-accent">Simplified</span>
           </h2>
 
           <p
             className="text-primary-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed"
             style={{ fontSize: "1.2rem", lineHeight: 1.8 }}>
-            Discover the distinguished way to compare and book premium rides.
-            Enter your locations above to unlock the finest transportation
-            options.
+            Discover the easiest way to compare and book rides. Enter your
+            locations above to find the best option for you.
           </p>
 
           <button
