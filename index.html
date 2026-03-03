@@ -1,15 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ride Comparison Platform</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+  <!-- Primary SEO -->
+  <title>RideCompare – Compare Uber, Lyft, Ola & Rapido Fares Instantly</title>
+  <meta name="description"
+    content="Compare ride fares from Uber, Lyft, Ola, and Rapido in one place. Find the cheapest, fastest rides instantly. Save time and money on every trip." />
+  <meta name="keywords"
+    content="ride comparison, uber vs lyft, ola vs rapido, compare cab fares, cheapest ride, ride aggregator, fare comparison, taxi comparison, ride hailing, ride booking" />
+  <meta name="author" content="Satbir Singh" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#d4af37" />
+  <meta name="msapplication-TileColor" content="#1a1311" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RideCompare – Compare Uber, Lyft, Ola & Rapido Fares" />
+  <meta property="og:description"
+    content="The smartest way to compare ride fares. See prices from Uber, Lyft, Ola, and Rapido side by side and book the best deal." />
+  <meta property="og:image" content="/images/hero-luxury-car.png" />
+  <meta property="og:site_name" content="RideCompare" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RideCompare – Compare Ride Fares Instantly" />
+  <meta name="twitter:description"
+    content="Compare fares from Uber, Lyft, Ola & Rapido in seconds. Find the cheapest ride every time." />
+  <meta name="twitter:image" content="/images/hero-luxury-car.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ridecompare.vercel.app/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "RideCompare",
+      "description": "Compare ride fares from Uber, Lyft, Ola, and Rapido instantly.",
+      "url": "https://ridecompare.vercel.app",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Satbir Singh"
+      }
+    }
+    </script>
+
+  <!-- Preconnect to fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

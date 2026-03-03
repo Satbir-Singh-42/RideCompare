@@ -1,0 +1,16 @@
+{
+    "name": "RideCompare - Premium Ride Comparison",
+    "short_name": "RideCompare",
+    "description": "Compare fares from Uber, Lyft, Ola & Rapido instantly. Find the cheapest ride in seconds.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1a1311",
+    "theme_color": "#d4af37",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

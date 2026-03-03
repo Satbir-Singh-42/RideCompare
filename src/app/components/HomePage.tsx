@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import {
   MapPin,
@@ -18,6 +18,7 @@ import { popularLocations, providerLogoMap } from "../data/mockData";
 import { getCurrentLocation, reverseGeocode } from "../utils/geolocation";
 
 export function HomePage() {
+  useEffect(() => { document.title = "RideCompare – Compare Uber, Lyft, Ola & Rapido Fares Instantly"; }, []);
   const navigate = useNavigate();
   const [pickup, setPickup] = useState("");
   const [drop, setDrop] = useState("");

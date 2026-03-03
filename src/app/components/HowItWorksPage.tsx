@@ -15,8 +15,10 @@ import {
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
+import { useEffect } from "react";
 
 export function HowItWorksPage() {
+  useEffect(() => { document.title = "How It Works – RideCompare | Official API Fare Comparison"; }, []);
   return (
     <div className="relative">
       {/* Hero Section */}
