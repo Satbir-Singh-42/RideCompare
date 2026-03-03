@@ -495,21 +495,21 @@ export function HowItWorksPage() {
             {[
               {
                 icon: <Globe className="w-8 h-8" />,
-                title: "Global Market Penetration",
-                desc: "Systematic expansion across 50+ metropolitan markets in India and international territories, establishing presence in high-value mobility corridors.",
-                timeline: "12-24 Months",
+                title: "Global Expansion",
+                desc: "Scaling across 50+ major cities worldwide — from New York and London to Mumbai and São Paulo — powered by AI-driven market analysis.",
+                timeline: "Q3 2026",
               },
               {
                 icon: <TrendingUp className="w-8 h-8" />,
-                title: "Predictive Analytics Engine",
-                desc: "Historical fare tracking infrastructure enabling pattern recognition and data-driven booking recommendations based on temporal and geographical factors.",
-                timeline: "18 Months",
+                title: "AI Predictive Pricing",
+                desc: "Machine-learning engine that forecasts fare trends and recommends optimal booking windows, saving users up to 30% on average.",
+                timeline: "Q4 2026",
               },
               {
                 icon: <Bell className="w-8 h-8" />,
-                title: "Intelligent Notification System",
-                desc: "Sophisticated alert architecture delivering personalized notifications for price fluctuations and optimal booking windows based on user preferences.",
-                timeline: "6-12 Months",
+                title: "Smart Fare Alerts",
+                desc: "Personalized AI notifications that detect price drops and surge patterns in real-time, so you always book at the best moment.",
+                timeline: "Q2 2026",
               },
             ].map((item, i) => (
               <div key={i} className="group relative">
