@@ -111,34 +111,8 @@ export function HomePage() {
                 real-time fares, ETAs, and availability — all in one place.
               </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-10">
-                {[
-                  { value: "4+", label: "Partners" },
-                  { value: "100%", label: "Official" },
-                  { value: "<2s", label: "Compare" },
-                ].map((stat, i) => (
-                  <div key={i} className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all" />
-                    <div className="relative bg-primary-foreground/5 backdrop-blur-sm border border-accent/30 rounded-lg p-4 text-center">
-                      <div
-                        className="text-accent mb-1"
-                        style={{
-                          fontSize: "1.75rem",
-                          fontWeight: 900,
-                          letterSpacing: "-0.02em",
-                        }}>
-                        {stat.value}
-                      </div>
-                      <div
-                        className="text-primary-foreground/60 uppercase tracking-wider"
-                        style={{ fontSize: "0.7rem", fontWeight: 600 }}>
-                        {stat.label}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+
+
 
               {/* Search Form */}
               <div className="relative">
