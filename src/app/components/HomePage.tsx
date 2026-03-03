@@ -18,7 +18,10 @@ import { popularLocations, providerLogoMap } from "../data/mockData";
 import { getCurrentLocation, reverseGeocode } from "../utils/geolocation";
 
 export function HomePage() {
-  useEffect(() => { document.title = "RideCompare – Compare Uber, Lyft, Ola & Rapido Fares Instantly"; }, []);
+  useEffect(() => {
+    document.title =
+      "RideCompare – Compare Uber, Lyft, Ola & Rapido Fares Instantly";
+  }, []);
   const navigate = useNavigate();
   const [pickup, setPickup] = useState("");
   const [drop, setDrop] = useState("");
@@ -28,13 +31,15 @@ export function HomePage() {
 
   const handleCompare = () => {
     if (pickup.trim() && drop.trim()) {
-      navigate(`/results?pickup=${encodeURIComponent(pickup)}&drop=${encodeURIComponent(drop)}`);
+      navigate(
+        `/results?pickup=${encodeURIComponent(pickup)}&drop=${encodeURIComponent(drop)}`,
+      );
     }
   };
 
   const filteredLocations = (query: string) =>
     popularLocations.filter((loc) =>
-      loc.toLowerCase().includes(query.toLowerCase())
+      loc.toLowerCase().includes(query.toLowerCase()),
     );
 
   const handleDetectLocation = async () => {
@@ -56,9 +61,12 @@ export function HomePage() {
       <section className="relative overflow-hidden bg-primary min-h-[85vh] flex items-center">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }} />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#2a2321] to-[#0d0b0a]" />
         </div>
 
@@ -73,23 +81,35 @@ export function HomePage() {
               {/* Premium Badge */}
               <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border-2 border-accent/40 bg-gradient-to-r from-accent/10 to-accent/5 backdrop-blur-sm mb-8 shadow-lg">
                 <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-                <span className="text-accent uppercase tracking-[0.15em]" style={{ fontSize: "0.75rem", fontWeight: 700 }}>
+                <span
+                  className="text-accent uppercase tracking-[0.15em]"
+                  style={{ fontSize: "0.75rem", fontWeight: 700 }}>
                   Luxury Mobility Aggregation
                 </span>
                 <div className="w-1 h-1 rounded-full bg-accent animate-pulse" />
               </div>
 
-              <h1 className="text-primary-foreground mb-6 leading-[1.05]" style={{ fontSize: "clamp(2.75rem, 6vw, 5rem)", fontWeight: 900, letterSpacing: "-0.03em" }}>
+              <h1
+                className="text-primary-foreground mb-6 leading-[1.05]"
+                style={{
+                  fontSize: "clamp(2.75rem, 6vw, 5rem)",
+                  fontWeight: 900,
+                  letterSpacing: "-0.03em",
+                }}>
                 The Definitive{" "}
                 <span className="relative inline-block">
                   <span className="text-accent">Standard</span>
                   <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent/80 to-transparent rounded-full" />
-                </span>
-                {" "}in Ride Comparison
+                </span>{" "}
+                in Ride Comparison
               </h1>
 
-              <p className="text-primary-foreground/70 mb-10 max-w-xl leading-relaxed" style={{ fontSize: "1.15rem", lineHeight: 1.8 }}>
-                An exclusive platform engineered for sophisticated travelers. Compare premium mobility services from Uber, Lyft, Ola, and Rapido with unparalleled precision and elegance.
+              <p
+                className="text-primary-foreground/70 mb-10 max-w-xl leading-relaxed"
+                style={{ fontSize: "1.15rem", lineHeight: 1.8 }}>
+                An exclusive platform engineered for sophisticated travelers.
+                Compare premium mobility services from Uber, Lyft, Ola, and
+                Rapido with unparalleled precision and elegance.
               </p>
 
               {/* Stats */}
@@ -102,10 +122,18 @@ export function HomePage() {
                   <div key={i} className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-lg blur-sm group-hover:blur-md transition-all" />
                     <div className="relative bg-primary-foreground/5 backdrop-blur-sm border border-accent/30 rounded-lg p-4 text-center">
-                      <div className="text-accent mb-1" style={{ fontSize: "1.75rem", fontWeight: 900, letterSpacing: "-0.02em" }}>
+                      <div
+                        className="text-accent mb-1"
+                        style={{
+                          fontSize: "1.75rem",
+                          fontWeight: 900,
+                          letterSpacing: "-0.02em",
+                        }}>
                         {stat.value}
                       </div>
-                      <div className="text-primary-foreground/60 uppercase tracking-wider" style={{ fontSize: "0.7rem", fontWeight: 600 }}>
+                      <div
+                        className="text-primary-foreground/60 uppercase tracking-wider"
+                        style={{ fontSize: "0.7rem", fontWeight: 600 }}>
                         {stat.label}
                       </div>
                     </div>
@@ -116,13 +144,13 @@ export function HomePage() {
               {/* Search Form */}
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl" />
-                <div className="relative bg-card/95 backdrop-blur-xl rounded-2xl border-2 border-accent/30 p-8 shadow-2xl">
-                  <div className="flex flex-col gap-5">
+                <div className="relative bg-card/95 backdrop-blur-xl rounded-xl sm:rounded-2xl border-2 border-accent/30 p-4 sm:p-6 md:p-8 shadow-2xl">
+                  <div className="flex flex-col gap-3 sm:gap-5">
                     {/* Pickup */}
                     <div className="relative group">
-                      <div className="absolute left-5 top-1/2 -translate-y-1/2 z-10">
+                      <div className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10">
                         <div className="relative">
-                          <div className="w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 group-focus-within:ring-6 transition-all" />
+                          <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-accent ring-4 ring-accent/20 group-focus-within:ring-6 transition-all" />
                           <div className="absolute inset-0 rounded-full bg-accent animate-ping opacity-20" />
                         </div>
                       </div>
@@ -132,9 +160,14 @@ export function HomePage() {
                         value={pickup}
                         onChange={(e) => setPickup(e.target.value)}
                         onFocus={() => setShowPickupSuggestions(true)}
-                        onBlur={() => setTimeout(() => setShowPickupSuggestions(false), 200)}
-                        className="w-full pl-14 pr-5 py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
-                        style={{ fontSize: "1.05rem", fontWeight: 500 }}
+                        onBlur={() =>
+                          setTimeout(() => setShowPickupSuggestions(false), 200)
+                        }
+                        className="w-full pl-10 sm:pl-14 pr-3 sm:pr-5 py-3.5 sm:py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
+                        style={{
+                          fontSize: "clamp(0.875rem, 2.5vw, 1.05rem)",
+                          fontWeight: 500,
+                        }}
                       />
                       {showPickupSuggestions && pickup.length > 0 && (
                         <div className="absolute top-full left-0 right-0 mt-2 bg-card rounded-xl border-2 border-accent/30 shadow-2xl z-20 max-h-64 overflow-y-auto backdrop-blur-xl">
@@ -142,10 +175,18 @@ export function HomePage() {
                             <button
                               key={loc}
                               className="w-full text-left px-5 py-3.5 hover:bg-accent/10 transition-colors flex items-center gap-3 text-foreground border-b border-border/30 last:border-0"
-                              onMouseDown={() => { setPickup(loc); setShowPickupSuggestions(false); }}
-                            >
+                              onMouseDown={() => {
+                                setPickup(loc);
+                                setShowPickupSuggestions(false);
+                              }}>
                               <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
-                              <span style={{ fontSize: "0.95rem", fontWeight: 500 }}>{loc}</span>
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  fontWeight: 500,
+                                }}>
+                                {loc}
+                              </span>
                             </button>
                           ))}
                         </div>
@@ -153,15 +194,15 @@ export function HomePage() {
                     </div>
 
                     {/* Dotted Connector */}
-                    <div className="flex items-center pl-7">
-                      <div className="w-px h-8 border-l-2 border-dashed border-accent/30" />
+                    <div className="flex items-center pl-5 sm:pl-7">
+                      <div className="w-px h-5 sm:h-8 border-l-2 border-dashed border-accent/30" />
                     </div>
 
                     {/* Drop */}
                     <div className="relative group">
-                      <div className="absolute left-5 top-1/2 -translate-y-1/2 z-10">
+                      <div className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10">
                         <div className="relative">
-                          <div className="w-3.5 h-3.5 rounded-full bg-destructive ring-4 ring-destructive/20 group-focus-within:ring-6 transition-all" />
+                          <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-destructive ring-4 ring-destructive/20 group-focus-within:ring-6 transition-all" />
                           <div className="absolute inset-0 rounded-full bg-destructive animate-ping opacity-20" />
                         </div>
                       </div>
@@ -171,9 +212,14 @@ export function HomePage() {
                         value={drop}
                         onChange={(e) => setDrop(e.target.value)}
                         onFocus={() => setShowDropSuggestions(true)}
-                        onBlur={() => setTimeout(() => setShowDropSuggestions(false), 200)}
-                        className="w-full pl-14 pr-5 py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
-                        style={{ fontSize: "1.05rem", fontWeight: 500 }}
+                        onBlur={() =>
+                          setTimeout(() => setShowDropSuggestions(false), 200)
+                        }
+                        className="w-full pl-10 sm:pl-14 pr-3 sm:pr-5 py-3.5 sm:py-5 bg-gradient-to-r from-muted/30 to-muted/10 rounded-xl border-2 border-border/50 focus:border-accent/60 focus:bg-card outline-none transition-all text-foreground placeholder:text-muted-foreground/50 shadow-sm"
+                        style={{
+                          fontSize: "clamp(0.875rem, 2.5vw, 1.05rem)",
+                          fontWeight: 500,
+                        }}
                       />
                       {showDropSuggestions && drop.length > 0 && (
                         <div className="absolute top-full left-0 right-0 mt-2 bg-card rounded-xl border-2 border-accent/30 shadow-2xl z-20 max-h-64 overflow-y-auto backdrop-blur-xl">
@@ -181,10 +227,18 @@ export function HomePage() {
                             <button
                               key={loc}
                               className="w-full text-left px-5 py-3.5 hover:bg-accent/10 transition-colors flex items-center gap-3 text-foreground border-b border-border/30 last:border-0"
-                              onMouseDown={() => { setDrop(loc); setShowDropSuggestions(false); }}
-                            >
+                              onMouseDown={() => {
+                                setDrop(loc);
+                                setShowDropSuggestions(false);
+                              }}>
                               <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
-                              <span style={{ fontSize: "0.95rem", fontWeight: 500 }}>{loc}</span>
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  fontWeight: 500,
+                                }}>
+                                {loc}
+                              </span>
                             </button>
                           ))}
                         </div>
@@ -194,9 +248,12 @@ export function HomePage() {
                     <button
                       onClick={handleCompare}
                       disabled={!pickup.trim() || !drop.trim()}
-                      className="mt-3 w-full py-5 bg-gradient-to-r from-primary via-[#2a2321] to-primary text-primary-foreground rounded-xl hover:shadow-2xl hover:shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3 border-2 border-accent/40 group relative overflow-hidden"
-                      style={{ fontSize: "1.15rem", fontWeight: 800, letterSpacing: "0.05em" }}
-                    >
+                      className="mt-2 sm:mt-3 w-full py-3.5 sm:py-5 bg-gradient-to-r from-primary via-[#2a2321] to-primary text-primary-foreground rounded-xl hover:shadow-2xl hover:shadow-accent/20 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3 border-2 border-accent/40 group relative overflow-hidden"
+                      style={{
+                        fontSize: "clamp(0.95rem, 2.5vw, 1.15rem)",
+                        fontWeight: 800,
+                        letterSpacing: "0.05em",
+                      }}>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                       <span className="relative">COMPARE FARES</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative" />
@@ -207,19 +264,26 @@ export function HomePage() {
 
               {/* Quick Locations */}
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <span className="text-primary-foreground/50 uppercase tracking-wider" style={{ fontSize: "0.75rem", fontWeight: 600 }}>
+                <span
+                  className="text-primary-foreground/50 uppercase tracking-wider"
+                  style={{ fontSize: "0.75rem", fontWeight: 600 }}>
                   Popular:
                 </span>
-                {["Connaught Place", "Bandra West", "Koramangala"].map((loc) => (
-                  <button
-                    key={loc}
-                    onClick={() => setPickup(popularLocations.find(l => l.includes(loc)) || loc)}
-                    className="px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-all border border-primary-foreground/20 hover:border-accent"
-                    style={{ fontSize: "0.85rem", fontWeight: 600 }}
-                  >
-                    {loc}
-                  </button>
-                ))}
+                {["Connaught Place", "Bandra West", "Koramangala"].map(
+                  (loc) => (
+                    <button
+                      key={loc}
+                      onClick={() =>
+                        setPickup(
+                          popularLocations.find((l) => l.includes(loc)) || loc,
+                        )
+                      }
+                      className="px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-all border border-primary-foreground/20 hover:border-accent"
+                      style={{ fontSize: "0.85rem", fontWeight: 600 }}>
+                      {loc}
+                    </button>
+                  ),
+                )}
               </div>
             </div>
 
@@ -238,18 +302,36 @@ export function HomePage() {
                   {/* Floating Stats Cards */}
                   <div className="absolute bottom-8 left-8 right-8 grid grid-cols-3 gap-3">
                     {[
-                      { icon: <Star className="w-4 h-4" />, value: "4.8", label: "Rating" },
-                      { icon: <Zap className="w-4 h-4" />, value: "2min", label: "ETA" },
-                      { icon: <Award className="w-4 h-4" />, value: "₹89", label: "Best" },
+                      {
+                        icon: <Star className="w-4 h-4" />,
+                        value: "4.8",
+                        label: "Rating",
+                      },
+                      {
+                        icon: <Zap className="w-4 h-4" />,
+                        value: "2min",
+                        label: "ETA",
+                      },
+                      {
+                        icon: <Award className="w-4 h-4" />,
+                        value: "₹89",
+                        label: "Best",
+                      },
                     ].map((item, i) => (
-                      <div key={i} className="bg-card/95 backdrop-blur-xl rounded-lg p-3 border border-accent/30 shadow-xl">
+                      <div
+                        key={i}
+                        className="bg-card/95 backdrop-blur-xl rounded-lg p-3 border border-accent/30 shadow-xl">
                         <div className="flex items-center gap-2 mb-1">
                           <div className="text-accent">{item.icon}</div>
-                          <span className="text-foreground" style={{ fontSize: "1.1rem", fontWeight: 800 }}>
+                          <span
+                            className="text-foreground"
+                            style={{ fontSize: "1.1rem", fontWeight: 800 }}>
                             {item.value}
                           </span>
                         </div>
-                        <p className="text-muted-foreground uppercase tracking-wider" style={{ fontSize: "0.65rem", fontWeight: 600 }}>
+                        <p
+                          className="text-muted-foreground uppercase tracking-wider"
+                          style={{ fontSize: "0.65rem", fontWeight: 600 }}>
                           {item.label}
                         </p>
                       </div>
@@ -263,15 +345,26 @@ export function HomePage() {
 
         {/* Elegant Wave Divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-20 sm:h-28">
+          <svg
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            className="w-full h-20 sm:h-28">
             <defs>
-              <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient
+                id="waveGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%">
                 <stop offset="0%" stopColor="#f4e8d9" stopOpacity="1" />
                 <stop offset="50%" stopColor="#e8dcc8" stopOpacity="1" />
                 <stop offset="100%" stopColor="#f4e8d9" stopOpacity="1" />
               </linearGradient>
             </defs>
-            <path d="M0,40 C240,90 480,10 720,50 C960,90 1200,30 1440,60 L1440,120 L0,120 Z" fill="url(#waveGradient)" />
+            <path
+              d="M0,40 C240,90 480,10 720,50 C960,90 1200,30 1440,60 L1440,120 L0,120 Z"
+              fill="url(#waveGradient)"
+            />
           </svg>
         </div>
       </section>
@@ -279,19 +372,30 @@ export function HomePage() {
       {/* Premium Features Showcase */}
       <section className="py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a1311' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E")`
-        }} />
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a1311' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+          }}
+        />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/30 mb-6">
               <Award className="w-4 h-4 text-accent" />
-              <span className="text-accent uppercase tracking-[0.15em]" style={{ fontSize: "0.7rem", fontWeight: 700 }}>
+              <span
+                className="text-accent uppercase tracking-[0.15em]"
+                style={{ fontSize: "0.7rem", fontWeight: 700 }}>
                 Excellence in Every Detail
               </span>
             </div>
-            <h2 className="text-foreground mb-5" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 900, letterSpacing: "-0.02em" }}>
+            <h2
+              className="text-foreground mb-5"
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+                fontWeight: 900,
+                letterSpacing: "-0.02em",
+              }}>
               Engineered for Distinction
             </h2>
             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto rounded-full" />
@@ -333,17 +437,28 @@ export function HomePage() {
                 <div className="relative h-full bg-card rounded-2xl border-2 border-border/50 group-hover:border-accent/60 p-8 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1">
                   {/* Icon */}
                   <div className="relative mb-6">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
+                    <div
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
                       {feature.icon}
                     </div>
-                    <div className={`absolute inset-0 w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} blur-md opacity-50 group-hover:opacity-70 transition-opacity`} />
+                    <div
+                      className={`absolute inset-0 w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} blur-md opacity-50 group-hover:opacity-70 transition-opacity`}
+                    />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-foreground mb-3" style={{ fontSize: "1.25rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
+                  <h3
+                    className="text-foreground mb-3"
+                    style={{
+                      fontSize: "1.25rem",
+                      fontWeight: 800,
+                      letterSpacing: "-0.01em",
+                    }}>
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "0.95rem", lineHeight: 1.7 }}>
+                  <p
+                    className="text-muted-foreground leading-relaxed"
+                    style={{ fontSize: "0.95rem", lineHeight: 1.7 }}>
                     {feature.desc}
                   </p>
 
@@ -368,15 +483,26 @@ export function HomePage() {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/90 backdrop-blur-sm mb-3">
                     <Star className="w-3.5 h-3.5 text-accent-foreground" />
-                    <span className="text-accent-foreground uppercase tracking-wider" style={{ fontSize: "0.65rem", fontWeight: 700 }}>
+                    <span
+                      className="text-accent-foreground uppercase tracking-wider"
+                      style={{ fontSize: "0.65rem", fontWeight: 700 }}>
                       First Class Experience
                     </span>
                   </div>
-                  <h3 className="text-primary-foreground mb-2" style={{ fontSize: "1.75rem", fontWeight: 900, letterSpacing: "-0.01em" }}>
+                  <h3
+                    className="text-primary-foreground mb-2"
+                    style={{
+                      fontSize: "1.75rem",
+                      fontWeight: 900,
+                      letterSpacing: "-0.01em",
+                    }}>
                     Executive Comfort
                   </h3>
-                  <p className="text-primary-foreground/80" style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
-                    Access premium vehicle options across all providers with transparent pricing
+                  <p
+                    className="text-primary-foreground/80"
+                    style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                    Access premium vehicle options across all providers with
+                    transparent pricing
                   </p>
                 </div>
               </div>
@@ -394,15 +520,26 @@ export function HomePage() {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/90 backdrop-blur-sm mb-3">
                     <Zap className="w-3.5 h-3.5 text-accent-foreground" />
-                    <span className="text-accent-foreground uppercase tracking-wider" style={{ fontSize: "0.65rem", fontWeight: 700 }}>
+                    <span
+                      className="text-accent-foreground uppercase tracking-wider"
+                      style={{ fontSize: "0.65rem", fontWeight: 700 }}>
                       Real-Time Intelligence
                     </span>
                   </div>
-                  <h3 className="text-primary-foreground mb-2" style={{ fontSize: "1.75rem", fontWeight: 900, letterSpacing: "-0.01em" }}>
+                  <h3
+                    className="text-primary-foreground mb-2"
+                    style={{
+                      fontSize: "1.75rem",
+                      fontWeight: 900,
+                      letterSpacing: "-0.01em",
+                    }}>
                     Instant Comparison
                   </h3>
-                  <p className="text-primary-foreground/80" style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
-                    Live fare aggregation from multiple platforms in under 2 seconds
+                  <p
+                    className="text-primary-foreground/80"
+                    style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                    Live fare aggregation from multiple platforms in under 2
+                    seconds
                   </p>
                 </div>
               </div>
@@ -421,16 +558,25 @@ export function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-foreground mb-5" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 900, letterSpacing: "-0.02em" }}>
+            <h2
+              className="text-foreground mb-5"
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+                fontWeight: 900,
+                letterSpacing: "-0.02em",
+              }}>
               Distinguished Partnerships
             </h2>
             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto rounded-full mb-6" />
-            <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
-              Official API integrations with the world's leading mobility providers
+            <p
+              className="text-muted-foreground max-w-2xl mx-auto"
+              style={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
+              Official API integrations with the world's leading mobility
+              providers
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {[
               { name: "Uber", color: "#000000", tagline: "Global Leader" },
               { name: "Lyft", color: "#FFFFFF", tagline: "US Premier" },
@@ -439,24 +585,34 @@ export function HomePage() {
             ].map((p, i) => (
               <div key={i} className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative flex flex-col items-center p-8 bg-gradient-to-b from-background/50 to-background rounded-2xl border-2 border-border/50 group-hover:border-accent/60 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2">
+                <div className="relative flex flex-col items-start sm:items-center p-5 sm:p-8 bg-gradient-to-b from-background/50 to-background rounded-2xl border-2 border-border/50 group-hover:border-accent/60 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2">
                   <div
-                    className="w-24 h-24 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300 mb-5 overflow-hidden"
-                    style={{ backgroundColor: p.color }}
-                  >
+                    className="w-16 h-16 sm:w-24 sm:h-24 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-5 overflow-hidden"
+                    style={{ backgroundColor: p.color }}>
                     <img
                       src={providerLogoMap[p.name]}
                       alt={`${p.name} logo`}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-foreground mb-2" style={{ fontSize: "1.3rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
+                  <h4
+                    className="text-foreground mb-1 sm:mb-2"
+                    style={{
+                      fontSize: "clamp(1rem, 3vw, 1.3rem)",
+                      fontWeight: 800,
+                      letterSpacing: "-0.01em",
+                    }}>
                     {p.name}
                   </h4>
-                  <p className="text-muted-foreground uppercase tracking-wider" style={{ fontSize: "0.75rem", fontWeight: 600 }}>
+                  <p
+                    className="text-muted-foreground uppercase tracking-wider text-left sm:text-center"
+                    style={{
+                      fontSize: "clamp(0.65rem, 1.5vw, 0.75rem)",
+                      fontWeight: 600,
+                    }}>
                     {p.tagline}
                   </p>
-                  <div className="mt-4 w-12 h-0.5 bg-gradient-to-r from-accent to-transparent rounded-full group-hover:w-full transition-all duration-500" />
+                  <div className="mt-3 sm:mt-4 w-12 h-0.5 bg-gradient-to-r from-accent to-transparent rounded-full group-hover:w-full transition-all duration-500" />
                 </div>
               </div>
             ))}
@@ -468,9 +624,12 @@ export function HomePage() {
       <section className="relative py-32 overflow-hidden">
         {/* Animated Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#2a2321] to-primary">
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }} />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
         </div>
 
         {/* Decorative Glow */}
@@ -479,25 +638,39 @@ export function HomePage() {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/20 border-2 border-accent/40 backdrop-blur-sm mb-8">
             <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-            <span className="text-accent uppercase tracking-[0.15em]" style={{ fontSize: "0.75rem", fontWeight: 700 }}>
+            <span
+              className="text-accent uppercase tracking-[0.15em]"
+              style={{ fontSize: "0.75rem", fontWeight: 700 }}>
               Begin Your Journey
             </span>
           </div>
 
-          <h2 className="text-primary-foreground mb-6 leading-tight" style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", fontWeight: 900, letterSpacing: "-0.02em" }}>
-            Experience Mobility{" "}
-            <span className="text-accent">Redefined</span>
+          <h2
+            className="text-primary-foreground mb-6 leading-tight"
+            style={{
+              fontSize: "clamp(2.25rem, 5vw, 4rem)",
+              fontWeight: 900,
+              letterSpacing: "-0.02em",
+            }}>
+            Experience Mobility <span className="text-accent">Redefined</span>
           </h2>
 
-          <p className="text-primary-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed" style={{ fontSize: "1.2rem", lineHeight: 1.8 }}>
-            Discover the distinguished way to compare and book premium rides. Enter your locations above to unlock the finest transportation options.
+          <p
+            className="text-primary-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed"
+            style={{ fontSize: "1.2rem", lineHeight: 1.8 }}>
+            Discover the distinguished way to compare and book premium rides.
+            Enter your locations above to unlock the finest transportation
+            options.
           </p>
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="group inline-flex items-center gap-4 px-12 py-6 bg-accent text-accent-foreground rounded-xl hover:shadow-2xl hover:shadow-accent/30 transition-all shadow-xl border-2 border-accent/30 relative overflow-hidden"
-            style={{ fontSize: "1.2rem", fontWeight: 800, letterSpacing: "0.05em" }}
-          >
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 800,
+              letterSpacing: "0.05em",
+            }}>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             <span className="relative">COMPARE NOW</span>
             <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform relative" />
