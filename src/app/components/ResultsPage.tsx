@@ -393,11 +393,10 @@ export function ResultsPage() {
                       <button
                         key={cat.key}
                         onClick={() => setSelectedCategory(cat.key)}
-                        className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border-2 transition-all ${
-                          selectedCategory === cat.key
+                        className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border-2 transition-all ${selectedCategory === cat.key
                             ? "bg-gradient-to-r from-accent to-[#c1a028] text-accent-foreground border-accent shadow-lg scale-105"
                             : "bg-card text-muted-foreground border-border/50 hover:border-accent/50"
-                        }`}
+                          }`}
                         style={{ fontSize: "0.85rem", fontWeight: 700 }}>
                         {categoryIcons[cat.key]}
                         {cat.label}
@@ -439,8 +438,8 @@ export function ResultsPage() {
                           />
                           {(selectedProviders.length === 0 ||
                             selectedProviders.includes(p.name)) && (
-                            <CheckCircle2 className="w-5 h-5 text-accent absolute inset-0 pointer-events-none" />
-                          )}
+                              <CheckCircle2 className="w-5 h-5 text-accent absolute inset-0 pointer-events-none" />
+                            )}
                         </div>
                         <div className="relative flex-shrink-0">
                           <div
@@ -634,11 +633,10 @@ export function ResultsPage() {
                       <button
                         key={opt.value}
                         onClick={() => setSortBy(opt.value)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all border-2 ${
-                          sortBy === opt.value
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all border-2 ${sortBy === opt.value
                             ? "bg-gradient-to-r from-accent/20 to-accent/10 text-foreground border-accent shadow-md"
                             : "text-muted-foreground border-transparent hover:bg-muted/50 hover:border-border/50"
-                        }`}
+                          }`}
                         style={{ fontSize: "0.95rem", fontWeight: 700 }}>
                         {opt.icon}
                         {opt.label}

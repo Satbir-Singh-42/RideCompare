@@ -259,7 +259,10 @@ export function HomePage() {
                   <img
                     src="/images/hero-luxury-car.png"
                     alt="Ride comparison hero"
-                    className="w-full h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                    className="w-full h-[550px] object-cover group-hover:scale-105 transition-all duration-700"
+                    style={{ opacity: 0 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
 
@@ -441,7 +444,10 @@ export function HomePage() {
                 <img
                   src="/images/premium-business-travel.png"
                   alt="Business travel"
-                  className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                  className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-all duration-700"
+                  style={{ opacity: 0 }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
@@ -478,7 +484,10 @@ export function HomePage() {
                 <img
                   src="/images/city-skyline-night.png"
                   alt="City mobility"
-                  className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                  className="w-full h-[350px] sm:h-[450px] object-cover group-hover:scale-110 transition-all duration-700"
+                  style={{ opacity: 0 }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
@@ -556,7 +565,10 @@ export function HomePage() {
                     <img
                       src={providerLogoMap[p.name]}
                       alt={`${p.name} logo`}
-                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                      className="w-full h-full object-cover transition-opacity duration-500"
+                      style={{ opacity: 0 }}
                     />
                   </div>
                   <h4
